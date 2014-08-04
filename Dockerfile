@@ -9,5 +9,5 @@ WORKDIR /yify-pop
 RUN npm install
 RUN npm install moment getport adm-zip opensrt_js child geddy
 RUN apt-get purge npm git -qy && apt-get autoremove -qy && apt-get clean all
-EXPOSE 4000
+EXPOSE 4000 8889
 CMD node yifystart.js

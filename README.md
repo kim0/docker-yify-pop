@@ -17,3 +17,14 @@ To build
 git clone https://github.com/kim0/docker-yify-pop.git
 docker build -t yify-pop-custom docker-yify-pop
 ```
+
+then to run that
+
+```
+docker run -d --name yify-pop -p 4000:4000 -p 8889:8889 yify-pop-custom
+```
+
+TODO
+----
+* Run application under non-root user account for better security
+* Allow changing port numbers (currently afaict application is expecting fixed numbers)
